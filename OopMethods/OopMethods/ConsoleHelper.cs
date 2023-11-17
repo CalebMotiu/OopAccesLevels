@@ -10,23 +10,31 @@ namespace OopMethods
     {
         public static void Print(string message)
         {
-            Console.WriteLine(message);
+            Print(string.Empty, message, 1);
         }
 
         public static void Print(string label,string message) 
         { 
-            if(!string.IsNullOrEmpty(label))
-            {
-                Console.WriteLine($"{label}:  ");
-            }
-            Console.WriteLine(message);
+            Print(label, message, 1);
         }
 
         public static void Print(string message, int count)
         {
-            for(int i = 0; i < count; i++) 
-            { 
-            Console.WriteLine(message);
+            Print(string.Empty, message, count);
+        }
+
+        private static void Print(string label,string message, int count) 
+        {
+            if (!string.IsNullOrEmpty(label))
+            {
+                Console.WriteLine($"{label}:  ");
+            }
+            
+
+
+                  for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(message);
             }
         }
     }
