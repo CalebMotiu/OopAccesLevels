@@ -1,23 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace OopMethods
 {
     internal static class ConsoleHelper
     {
+        /// <summary>
+        /// Prints a message
+        /// </summary>
+        /// <param name="message"></param>
         public static void Print(string message)
         {
             Print(string.Empty, message, 1);
         }
 
+        /// <summary>
+        /// Prints a label and a message
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="message"></param>
         public static void Print(string label,string message) 
         { 
             Print(label, message, 1);
         }
 
+        /// <summary>
+        /// prints a message and count
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="count"></param>
         public static void Print(string message, int count)
         {
             Print(string.Empty, message, count);
